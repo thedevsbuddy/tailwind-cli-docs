@@ -4,7 +4,7 @@ title: The ultimate solution to build flutter apps with tailwind styles
 layout: home
 
 hero:
-  name: TailwindCLI2
+  name: TailwindCLI
   text: Build awesome flutter apps with tailwind styles.
   # tagline: Lorem ipsum...
   # image:

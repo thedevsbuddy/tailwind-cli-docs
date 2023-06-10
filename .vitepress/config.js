@@ -1,10 +1,10 @@
 export default {
   title: "TailwindCLI",
   description: "Just playing around.",
-  base: "/tailwind-cli2/",
+  base: "/tailwind-cli/",
   cleanUrls: false,
   srcDir: './src',
-  outDir: './.vitepress/tailwind-cli2',
+  outDir: './.vitepress/tailwind-cli',
   markdown: {
     lineNumbers: true,
     defaultHighlightLang: "dart",
