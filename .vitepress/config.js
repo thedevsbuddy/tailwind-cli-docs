@@ -1,7 +1,7 @@
 export default {
   title: "TailwindCLI",
   description: "Just playing around.",
-  base: "/tailwind-cli/",
+  base: "/tailwind-cli2/",
   cleanUrls: false,
   srcDir: './src',
   markdown: {
