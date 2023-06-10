@@ -12,6 +12,3 @@ These are the methods available for the paddings by default. They all excepts `d
 | .pr(double val) | Creates right side padding         |
 | .pb(double val) | Creates botton padding             |
 
-::: tip
-If you have added more spacers inside your `tailwind.config.json` file, they will also be available for you to use on any Widget that uses `TwPaddingMixin`.
-:::

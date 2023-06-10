@@ -6,6 +6,10 @@ title: Paddings Extensions - Mixins
 
 These are the extensions available for paddings by default. They are generated based on default `tailwind.config.json` configuration and these value can be customize or you can add more on top of these extensions.
 
+::: tip
+If you have added more spacers inside your `tailwind.config.json` file, they will also be available for you to use on any Widget that uses `TwPaddingMixin`.
+:::
+
 | Extension | Description                                    |
 | --------- | ---------------------------------------------- |
 | .p0       | Adds all side padding with value `0`            |

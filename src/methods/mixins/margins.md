@@ -11,7 +11,3 @@ These are the methods available for margins by default. They all excepts `double
 | .mt(double val) | Creates top side margin           |
 | .mr(double val) | Creates right side margin         |
 | .mb(double val) | Creates botton margin             |
-
-::: tip
-If you have added more spacers inside your `tailwind.config.json` file, they will also be available for you to use on any Widget that uses `TwMarginMixin`.
-:::

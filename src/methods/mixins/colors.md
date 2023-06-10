@@ -5,8 +5,8 @@ Tailwind provides you color methods from your flutter theme. But it adds a layer
 | Method                                         | Dark Mode                                            |
 | ---------------------------------------------- | ---------------------------------------------------- |
 | .primaryColor(BuildContext context)            | .onDarkPrimaryColor(BuildContext context)            |
-| .primaryColorLight(BuildContext context)       | .onDarkPrimaryColorLight(BuildContext context)       |
-| .primaryColorDark(BuildContext context)        | .onDarkPrimaryColorDark(BuildContext context)        |
+| .primaryLightColor(BuildContext context)       | .onDarkPrimaryLightColor(BuildContext context)       |
+| .primaryDarkColor(BuildContext context)        | .onDarkPrimaryDarkColor(BuildContext context)        |
 | .secondaryColor(BuildContext context)          | .onDarkSecondaryColor(BuildContext context)          |
 | .backgroundColor(BuildContext context)         | .onDarkBackgroundColor(BuildContext context)         |
 | .scaffoldBackgroundColor(BuildContext context) | .onDarkScaffoldBackgroundColor(BuildContext context) |

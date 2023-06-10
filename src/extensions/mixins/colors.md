@@ -6,20 +6,6 @@ title: Color Extensions - Mixins
 
 Tailwind is filled with lots of beautiful colors to be used on any application to make it look awesome.
 
-## Theme Colors
-
-Now, you can access theme colors without relying on the `context`, allowing you to utilize theme colors in areas where the `context` is not available. However, if you prefer to continue using theme colors with the `context`, fret not! We have you covered with all the available [theme's color methods](../../methods/mixins/colors.md) at your disposal.
-
-| Extension                     | Dark Mode                           |
-| ----------------------------- | ----------------------------------- |
-| .themePrimaryColor            | .onDarkThemePrimaryColor            |
-| .themePrimaryColorLight       | .onDarkThemePrimaryColorLight       |
-| .themePrimaryColorDark        | .onDarkThemePrimaryColorDark        |
-| .themeSecondaryColor          | .onDarkThemeSecondaryColor          |
-| .themeBackgroundColor         | .onDarkThemeBackgroundColor         |
-| .themeScaffoldBackgroundColor | .onDarkThemeScaffoldBackgroundColor |
-| .themeCardColor               | .onDarkThemeCardColor               |
-
 ## Default Colors from Color Pallete
 
 In addition to these default colors you will be able to access all the custom colors you added on the `tailwind.config.json` file. And yes all the colors will also have their `onDark` variants.

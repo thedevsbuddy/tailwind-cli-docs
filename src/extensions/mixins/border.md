@@ -56,7 +56,7 @@ With tailwind you get some helpful extensions to apply border on Widget that sup
 | .border60   | Adds a border with the thickness of `240dp`                            |
 | .border64   | Adds a border with the thickness of `256dp`                            |
 
-## Border Color
+## Border Colors
 
 | Extensions                                                  | Methods                                               |
 | ----------------------------------------------------------- | ----------------------------------------------------- |

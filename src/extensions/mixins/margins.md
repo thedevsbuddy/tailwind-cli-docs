@@ -6,6 +6,10 @@ title: Margins Extensions - Mixins
 
 These are the extensions available for margins by default. They are generated based on default `tailwind.config.json` configuration and these value can be customize or you can add more on top of these extensions.
 
+::: tip
+If you have added more spacers inside your `tailwind.config.json` file, they will also be available for you to use on any Widget that uses `TwMarginMixin`.
+:::
+
 | Extension | Description                                    |
 | --------- | ---------------------------------------------- |
 | .m0       | Adds all side margin with value `0`            |
