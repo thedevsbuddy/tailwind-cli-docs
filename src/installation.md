@@ -50,8 +50,55 @@ Publishing the `tailwind.config.json` file will create a config file for Tailwin
 ```shell
 flutter pub run tailwind_cli:build
 ```
- <!-- TODO: Add description here -->
- 
+
+This commend will generate whole `tailwind` project into your prject's root directory.
+
+Gererated directory structure.
+
+:::code-group
+
+```txt[Tailwind project's directory structure]
+📂 tailwind
+├── 📂 lib
+│   ├── 📂 extensions
+│   │   ├── 📄 TwColorExtension.dart
+│   │   ├── 📄 TwContextExtension.dart
+│   │   ├── 📄 TwNumbersExtension.dart
+│   │   └── 📄 TwWidgetExtension.dart
+│   ├── 📂 mixins
+│   │   ├── 📄 TwAlignmentMixin.dart
+│   │   ├── 📄 TwBorderMixin.dart
+│   │   ├── 📄 TwColorMixin.dart
+│   │   ├── 📄 TwGestureMixin.dart
+│   │   ├── 📄 TwGradientMixin.dart
+│   │   ├── 📄 TwMarginMixin.dart
+│   │   ├── 📄 TwPaddingMixin.dart
+│   │   ├── 📄 TwRoundnessMixin.dart
+│   │   └── 📄 TwShoadowMixin.dart
+│   ├── 📂 utilities
+│   │   ├── 📄 TwColors.dart
+│   │   ├── 📄 TwService.dart
+│   │   ├── 📄 TwSizes.dart
+│   │   └── 📄 TwUtils.dart
+│   ├── 📂 widgets
+│   │   ├── 📄 TwAppBuilder.dart
+│   │   ├── 📄 TwBuilder.dart
+│   │   ├── 📄 TwButton.dart
+│   │   ├── 📄 TwColumn.dart
+│   │   ├── 📄 TwContainer.dart
+│   │   ├── 📄 TwInkwell.dart
+│   │   ├── 📄 TwPadding.dart
+│   │   ├── 📄 TwRow.dart
+│   │   ├── 📄 TwStack.dart
+│   │   ├── 📄 TwText.dart
+│   │   └── 📄 TwWrap.dart
+│   └── 📄 tailwind.dart
+├── 📄 pubspec.lock
+└── 📄 pubspec.yaml
+```
+
+:::
+
 ## Add tailwind to your project
 
 Include tailwind in your project's `pubspec.yaml` file under `dependencies` section
@@ -75,17 +122,22 @@ flutter pub get
 ## Configure your app to use tailwind
 
 ### Initialize TwService
+
 Go to your `main.dart` file and initialize `TwService` in your `main()` method:
+
 ```dart
 void main() async { // Added async
   await TwService.init(); //[!code ++]
   runApp(const MyApp());
 }
 ```
-**Note: `TwService.init()` is an asynchronous method so you need to make `main` method as async** 
- 
+
+**Note: `TwService.init()` is an asynchronous method so you need to make `main` method as async**
+
 ### Configure MaterialApp
+
 Now you will need to add `TwAppKey` into your `MaterialApp` to do so:
+
 ```dart
 return MaterialApp(
   key: TwService.appKey, //[!code ++]
@@ -98,6 +150,7 @@ return MaterialApp(
 If you want to take benefit of the TwApp reactivity on theme mode change you should add `TwAppBuilder` into your app.
 
 To do so wrap your `MaterialApp` with `TwAppBuilder`:
+
 ```dart
 TwAppBuilder(
   builder: (BuildContext context, ThemeMode themeMode) {

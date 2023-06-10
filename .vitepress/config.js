@@ -90,6 +90,10 @@ export default {
             text: "Adding Custom Styles",
             link: "/core-concepts/adding-custom-styles",
           },
+          {
+            text: "Theme Management",
+            link: "/core-concepts/theme-management",
+          },
         ],
       },
       {
@@ -137,8 +141,48 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          { text: "Methods", link: "/extensions/methods" },
-          { text: "Getters", link: "/extensions/getters" },
+          {
+            text: "Mixins", items: [
+              { text: "Alignment", link: "/extensions/mixins/alignment" },
+              { text: "Border", link: "/extensions/mixins/border" },
+              { text: "Colors", link: "/extensions/mixins/colors" },
+              { text: "Gestures", link: "/extensions/mixins/gestures" },
+              { text: "Gradients", link: "/extensions/mixins/gradients" },
+              { text: "Margins", link: "/extensions/mixins/margins" },
+              { text: "Paddings", link: "/extensions/mixins/paddings" },
+              { text: "Roundness", link: "/extensions/mixins/roundness" },
+              { text: "Shadow", link: "/extensions/mixins/shadow" },
+            ]
+          },
+          {
+            text: "Widgets", items: [
+              { text: "TwText", link: "/extensions/widgets/tw-text" }
+            ]
+          },
+        ],
+      },
+      {
+        text: "Methods",
+        collapsible: true,
+        collapsed: true,
+        items: [
+          {
+            text: "Mixins", items: [
+              { text: "Alignment", link: "/methods/mixins/alignment" },
+              { text: "Colors", link: "/methods/mixins/colors" },
+              { text: "Gestures", link: "/methods/mixins/gestures" },
+              { text: "Gradients", link: "/methods/mixins/gradients" },
+              { text: "Margins", link: "/methods/mixins/margins" },
+              { text: "Paddings", link: "/methods/mixins/paddings" },
+              { text: "Roundness", link: "/methods/mixins/roundness" },
+              { text: "Shadow", link: "/methods/mixins/shadow" },
+            ]
+          },
+          {
+            text: "Widgets", items: [
+              { text: "TwText", link: "/methods/widgets/tw-text" }
+            ]
+          },
         ],
       },
       {

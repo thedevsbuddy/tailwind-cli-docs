@@ -57,7 +57,7 @@ TwText(
 
 ### Methods
 
-I created some methods to help you create, take acions easily.
+Tailwind offers a range of handy methods that facilitate effortless creation and execution of actions.
 
 ::: tip
 You can check the [`Extensions » Methods`](../extensions/methods) section to know more about the available methods in `TailwindCLI`.

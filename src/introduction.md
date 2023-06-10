@@ -26,67 +26,69 @@ Streamline your app building process with ease! This Library, as previously ment
 
 Here is an example and comparison between the native way to build a container to look like a button and the tailwind CLI way of writing code for the same.
 
-### Making a container to look like a button
+### Making a custom button
 
-```dart
+:::code-group
+
+```dart[Normal Way]
 InkWell(
   onTap: () {
     // Do nothing for now!
   },
-  child: Container(
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(8),
-      color: Theme.of(context).primaryColor,
-    ),
-    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-    child: Text(
-      "Native Container As Button",
-      style: TextStyle(
-        fontSize: 14,
-        fontWeight: FontWeight.w600,
-        height: 1,
-        color: Colors.white,
+  child: Row(
+    crossAxisAlignment: CrossAxisAlignment.center,
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Theme.of(context).primaryColor,
+        ),
+        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        child: Text(
+          "Simple custom button",
+          style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+            height: 1,
+            color: Colors.white,
+          ),
+        ),
       ),
-    ),
+    ],
   ),
 ),
 ```
 
+:::
+
 ### The tailwind way:
 
-```dart
-"Tailwind Container As Button".isText
-.textSm
-.semiBold
-.white
-.leadingNormal
-.render()
-.isContainer /// Container starts here
-.roundedLg
-.primaryColor(context)
-.render()
-.onTap(() => print("Do nothing for now!")),
-```
+:::code-group
 
-### Another way with Tailwind:
-
-```dart
-TwInkWell(
-  child: TwContainer(
-    child: TwText('Tailwind Container As Button')
-    .textSm
-    .semiBold
-    .white
-    .leadingNormal
-    .render(),
-  )
+```dart[Easiest Method]
+TwRow([
+  "Tailwind custom button".isText
+  .textSm
+  .semiBold
+  .white
+  .leadingNormal
+  .render() /// Text ends here
+  .isContainer /// Container starts here
+  .px4
+  .py2
   .roundedLg
   .primaryColor(context)
-  .render(),
-)
-.onTap(() => print("Do nothing for now!"))
-.render(),
+  .render() /// Container ends here
+])
+.justifyCenter
+.min
+.render() /// Row ends here
+.onTap(() => print("Do nothing for now!")), /// Wraps with `InkWell` widget and add `onTap` method
 ```
+
+:::
+
 
 There are multiple ways to do the same thing with tailwind styles which can be helpful for any developer.
 
