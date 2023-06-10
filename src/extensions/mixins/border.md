@@ -8,17 +8,17 @@ With tailwind you get some helpful extensions to apply border on Widget that sup
 
 ## To Enable Borders on Widget
 
-| Extension   | Description                                                                                  |
-| ----------- | -------------------------------------------------------------------------------------------- |
-| .border     | **_@Depricated_**: It Enables border to be used on Widget.                                   |
-| .withBorder | It Enables border to be used on Widget. You need to use this extension instead of `.border`. |
+| Extension  | Description                                                                                  |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| .border    | **_@Depricated_**: It Enables border to be used on Widget.                                   |
+| .hasBorder | It Enables border to be used on Widget. You need to use this extension instead of `.border`. |
 
 ## Set Border Style
 
-| Extension    | Description |
-| ------------ | ----------- |
-| .borderSolid |             |
-| .borderNone  |             |
+| Extension    | Description               |
+| ------------ | ------------------------- |
+| .borderSolid | Create solit border       |
+| .borderNone  | Hides / remove the border |
 
 ## Set Border Size
 
