@@ -4,6 +4,7 @@ export default {
   base: "/tailwind-cli2/",
   cleanUrls: false,
   srcDir: './src',
+  outDir: './.vitepress/tailwind-cli2',
   markdown: {
     lineNumbers: true,
     defaultHighlightLang: "dart",
