@@ -15,10 +15,10 @@ With tailwind you get some helpful extensions to apply border on Widget that sup
 
 ## Set Border Style
 
-| Extension    | Description               |
-| ------------ | ------------------------- |
-| .borderSolid | Create solit border       |
-| .borderNone  | Hides / remove the border |
+| Extension    | Description              |
+| ------------ | ------------------------ |
+| .borderSolid | Create solid border      |
+| .borderNone  | Hide / remove the border |
 
 ## Set Border Size
 
