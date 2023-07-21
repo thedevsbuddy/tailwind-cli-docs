@@ -137,29 +137,20 @@ export default {
         ],
       },
       {
-        text: "Extensions",
+        text: "Mixins",
         collapsible: true,
         collapsed: true,
         items: [
-          {
-            text: "Mixins", items: [
-              { text: "Alignment", link: "/extensions/mixins/alignment" },
-              { text: "Border", link: "/extensions/mixins/border" },
-              { text: "Colors", link: "/extensions/mixins/colors" },
-              { text: "Gestures", link: "/extensions/mixins/gestures" },
-              { text: "Gradients", link: "/extensions/mixins/gradients" },
-              { text: "Margins", link: "/extensions/mixins/margins" },
-              { text: "Paddings", link: "/extensions/mixins/paddings" },
-              { text: "Roundness", link: "/extensions/mixins/roundness" },
-              { text: "Shadow", link: "/extensions/mixins/shadow" },
-            ]
-          },
-          {
-            text: "Widgets", items: [
-              { text: "TwText", link: "/extensions/widgets/tw-text" }
-            ]
-          },
-        ],
+          { text: "Alignment", link: "/mixins/alignment" },
+          { text: "Border", link: "/mixins/border" },
+          { text: "Colors", link: "/mixins/colors" },
+          { text: "Gestures", link: "/mixins/gestures" },
+          { text: "Gradients", link: "/mixins/gradients" },
+          { text: "Margins", link: "/mixins/margins" },
+          { text: "Paddings", link: "/mixins/paddings" },
+          { text: "Roundness", link: "/mixins/roundness" },
+          { text: "Shadow", link: "/mixins/shadow" },
+        ]
       },
       {
         text: "Methods",

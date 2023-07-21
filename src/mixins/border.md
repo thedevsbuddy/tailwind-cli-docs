@@ -1,8 +1,8 @@
 ---
-title: Border Extensions - Mixins
+title: Border Mixin - Mixins
 ---
 
-# Border Extensions
+# Border Mixin
 
 With tailwind you get some helpful extensions to apply border on Widget that supports border.
 

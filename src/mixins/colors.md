@@ -1,8 +1,8 @@
 ---
-title: Color Extensions - Mixins
+title: Color Mixin - Mixins
 ---
 
-# Color Extensions
+# Color Mixin
 
 Tailwind is filled with lots of beautiful colors to be used on any application to make it look awesome.
 

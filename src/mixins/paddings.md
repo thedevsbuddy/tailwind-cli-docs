@@ -1,8 +1,8 @@
 ---
-title: Paddings Extensions - Mixins
+title: Paddings Mixin - Mixins
 ---
 
-# Paddings Extensions
+# Paddings Mixin
 
 These are the extensions available for paddings by default. They are generated based on default `tailwind.config.json` configuration and these value can be customize or you can add more on top of these extensions.
 

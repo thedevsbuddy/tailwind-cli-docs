@@ -1,8 +1,8 @@
 ---
-title: Margins Extensions - Mixins
+title: Margins Mixin - Mixins
 ---
 
-# Margins Extensions
+# Margins Mixin
 
 These are the extensions available for margins by default. They are generated based on default `tailwind.config.json` configuration and these value can be customize or you can add more on top of these extensions.
 

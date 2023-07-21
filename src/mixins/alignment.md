@@ -1,10 +1,10 @@
 ---
-title: Alignment Extensions - Mixins
+title: Alignment Mixin - Mixins
 ---
 
-# Alignment Extensions
+# Alignment Mixin
 
-There are only few extensions available for the Alignment Mixin and they are the only one which we will need in any widget. Thats why we are not having any configuration option in `tailwind.config.json` file.
+Only a handful of extensions are offered for the Alignment Mixin, and these cover all the requirements for any widget. As a result, there is no need for any configuration option in the `tailwind.config.json` file.
 
 | Extension     | Description                    |
 | ------------- | ------------------------------ |
