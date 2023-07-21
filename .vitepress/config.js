@@ -157,24 +157,15 @@ export default {
         collapsible: true,
         collapsed: true,
         items: [
-          {
-            text: "Mixins", items: [
-              { text: "Alignment", link: "/methods/mixins/alignment" },
-              { text: "Colors", link: "/methods/mixins/colors" },
-              { text: "Gestures", link: "/methods/mixins/gestures" },
-              { text: "Gradients", link: "/methods/mixins/gradients" },
-              { text: "Margins", link: "/methods/mixins/margins" },
-              { text: "Paddings", link: "/methods/mixins/paddings" },
-              { text: "Roundness", link: "/methods/mixins/roundness" },
-              { text: "Shadow", link: "/methods/mixins/shadow" },
-            ]
-          },
-          {
-            text: "Widgets", items: [
-              { text: "TwText", link: "/methods/widgets/tw-text" }
-            ]
-          },
-        ],
+          { text: "Alignment", link: "/methods/alignment" },
+          { text: "Colors", link: "/methods/colors" },
+          { text: "Gestures", link: "/methods/gestures" },
+          { text: "Gradients", link: "/methods/gradients" },
+          { text: "Margins", link: "/methods/margins" },
+          { text: "Paddings", link: "/methods/paddings" },
+          { text: "Roundness", link: "/methods/roundness" },
+          { text: "Shadow", link: "/methods/shadow" },
+        ]
       },
       {
         text: "Effects",

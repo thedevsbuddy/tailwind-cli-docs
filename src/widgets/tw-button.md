@@ -90,12 +90,12 @@ TwButton(
 
 | Mixins Extensions                         | Mixins Methods                         |
 | ----------------------------------------- | -------------------------------------- |
-| [Alignment](/extensions/mixins/alignment) | [Alignment](/methods/mixins/alignment) |
-| [Borders](/extensions/mixins/border)      | N/A                                    |
-| [Colors](/extensions/mixins/colors)       | [Colors](/methods/mixins/colors)       |
-| [Gestures](/extensions/mixins/gestures)   | [Gestures](/methods/mixins/gestures)   |
-| [Gradients](/extensions/mixins/gradients) | [Gradients](/methods/mixins/gradients) |
-| [Margins](/extensions/mixins/margins)     | [Margins](/methods/mixins/margins)     |
-| [Paddings](/extensions/mixins/paddings)   | [Paddings](/methods/mixins/paddings)   |
-| [Roundness](/extensions/mixins/roundness) | [Roundness](/methods/mixins/roundness) |
-| [Shadows](/extensions/mixins/shadow)      | [Shadows](/methods/mixins/shadow)      |
+| [Alignment](/mixins/alignment) | [Alignment](/methods/alignment) |
+| [Borders](/mixins/border)      | N/A                                    |
+| [Colors](/mixins/colors)       | [Colors](/methods/colors)       |
+| [Gestures](/mixins/gestures)   | [Gestures](/methods/gestures)   |
+| [Gradients](/mixins/gradients) | [Gradients](/methods/gradients) |
+| [Margins](/mixins/margins)     | [Margins](/methods/margins)     |
+| [Paddings](/mixins/paddings)   | [Paddings](/methods/paddings)   |
+| [Roundness](/mixins/roundness) | [Roundness](/methods/roundness) |
+| [Shadows](/mixins/shadow)      | [Shadows](/methods/shadow)      |

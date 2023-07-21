@@ -58,6 +58,6 @@ With tailwind you get some helpful extensions to apply border on Widget that sup
 
 ## Border Colors
 
-| Extensions                                                  | Methods                                               |
-| ----------------------------------------------------------- | ----------------------------------------------------- |
-| [Color Extensions](/extensions/mixins/colors#border-colors) | [Color Methods](/methods/mixins/colors#border-colors) |
+| Extensions                                       | Methods                                               |
+| ------------------------------------------------ | ----------------------------------------------------- |
+| [Color Extensions](/mixins/colors#border-colors) | [Color Methods](/methods/colors#border-colors) |
