@@ -59,7 +59,7 @@ export default {
         link: "https://devsbuddy.com/blog",
       },
       {
-        text: "0.6.4",
+        text: "0.7.0",
         items: [
           {
             text: "Changelog",
@@ -116,6 +116,7 @@ export default {
           { text: "TwButton", link: "/widgets/tw-button" },
           { text: "TwColumn", link: "/widgets/tw-column" },
           { text: "TwContainer", link: "/widgets/tw-container" },
+          { text: "TwImage", link: "/widgets/tw-image" },
           { text: "TwPadding", link: "/widgets/tw-padding" },
           { text: "TwRow", link: "/widgets/tw-row" },
           { text: "TwStack", link: "/widgets/tw-stack" },
@@ -150,6 +151,7 @@ export default {
           { text: "Paddings", link: "/mixins/paddings" },
           { text: "Roundness", link: "/mixins/roundness" },
           { text: "Shadow", link: "/mixins/shadow" },
+          { text: "Size", link: "/mixins/size" },
         ]
       },
       {

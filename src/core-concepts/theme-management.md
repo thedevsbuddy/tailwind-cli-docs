@@ -69,6 +69,9 @@ TextButton(
 Used in a settings page example:
 
 ```dart
+import "package:tailwind/tailwind.dart";
+//...
+
 class SettingsPage extends StatelessWidget {
   SettingsPage({super.key});
 

@@ -13,7 +13,7 @@ Or mannually
 ```yaml
 dev_dependencies:
   #...
-  tailwind_cli: ^0.6.4 // [!code ++]
+  tailwind_cli: ^0.7.0 // [!code ++]
 ```
 
 And then install the libraries with
@@ -28,6 +28,11 @@ Now publish the `tailwind.config.json` file
 
 ```shell
 flutter pub run tailwind_cli:init
+```
+or 
+
+```shell
+dart run tailwind_cli:init
 ```
 
 Publishing the `tailwind.config.json` file will create a config file for Tailwind styles.
@@ -49,6 +54,12 @@ Publishing the `tailwind.config.json` file will create a config file for Tailwin
 
 ```shell
 flutter pub run tailwind_cli:build
+```
+
+or 
+
+```shell
+dart run tailwind_cli:build
 ```
 
 This commend will generate whole `tailwind` project into your prject's root directory.
@@ -74,7 +85,8 @@ Gererated directory structure.
 │   │   ├── 📄 TwMarginMixin.dart
 │   │   ├── 📄 TwPaddingMixin.dart
 │   │   ├── 📄 TwRoundnessMixin.dart
-│   │   └── 📄 TwShoadowMixin.dart
+│   │   ├── 📄 TwShoadowMixin.dart
+│   │   └── 📄 TwSizeMixin.dart
 │   ├── 📂 utilities
 │   │   ├── 📄 TwColors.dart
 │   │   ├── 📄 TwService.dart
@@ -86,6 +98,7 @@ Gererated directory structure.
 │   │   ├── 📄 TwButton.dart
 │   │   ├── 📄 TwColumn.dart
 │   │   ├── 📄 TwContainer.dart
+│   │   ├── 📄 TwImage.dart
 │   │   ├── 📄 TwInkwell.dart
 │   │   ├── 📄 TwPadding.dart
 │   │   ├── 📄 TwRow.dart
@@ -145,6 +158,15 @@ return MaterialApp(
 );
 ```
 
+Or if you are using `GetX` package and `GetMaterialApp` 
+
+```dart
+return GetMaterialApp(
+  key: TwService.appKey, //[!code ++]
+  //... Other properties
+);
+```
+
 ### Add TwAppBuilder (Optional)
 
 If you want to take benefit of the TwApp reactivity on theme mode change you should add `TwAppBuilder` into your app.
@@ -171,6 +193,11 @@ To do so run this command:
 
 ```shell
 flutter pub run tailwind_cli:build
+```
+or
+
+```shell
+dart run tailwind_cli:build
 ```
 
 This command will generate whole tailwind styles and widgets with the new configuration that you added in the `tailwind.config.json` file.
