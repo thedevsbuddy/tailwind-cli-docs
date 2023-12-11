@@ -59,7 +59,7 @@ export default {
         link: "https://devsbuddy.com/blog",
       },
       {
-        text: "0.7.0",
+        text: "0.7.1",
         items: [
           {
             text: "Changelog",

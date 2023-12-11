@@ -4,44 +4,37 @@
             <div class="colorName">
                 {{ color.name }}
             </div>
-            <div class="colorInfo" v-for="(c, x) in color.colors" :key="x">
-                <span class="box" :style="`--color: ${c}`"></span>
-                <span class="colorCode">{{ c }}</span>
-                <span class="colorShade">{{ x }}</span>
-            </div>
+            <template v-for="(c, x) in color.colors" :key="x">
+                <div class="colorInfo" v-if="x !== 'DEFAULT'">
+                    <div class="box" :style="`--color: ${c}`" @click="(e) => copyColorCode(e, `${c}`)"></div>
+                    <span class="colorShade">{{ x }}</span>
+                    <span class="colorCode">{{ c }}</span>
+                </div>
+            </template>
+
         </template>
     </div>
-
-    <!-- <table>
-        <tbody>
-            <tr v-for="(color, index) in colors" :key="index">
-                <td class="text-center">
-                    {{ color.name }}
-                </td>
-                <td class="text-center" v-for="(c, x) in color.colors" :key="x">
-                    <span class="box" :style="`--color: ${c}`"></span>
-                    <span class="colorCode">{{ c }}</span>
-                    <span class="colorShade">{{ x }}</span>
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
 </template>
 
 <style scoped>
 .grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(11, 1fr);
     max-width: 100%;
     overflow-x: auto;
+    overflow-y: visible;
+    padding-top: 16px;
+    gap: 4px;
 }
 
 .box {
     display: block;
+    position: relative;
     background-color: var(--color);
-    height: 40px;
-    width: 40px;
-    border-radius: 8px;
+    height: 35px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #ffffff1a;
 }
 
 .colorInfo {
@@ -51,84 +44,109 @@
 
 .colorName {
     font-size: 14px;
+    height: 40px;
     display: grid;
+    line-height: 1;
     align-items: center;
 }
 
 .colorCode {
     display: block;
-    margin-top: 4px;
-    font-size: 12px;
+    font-size: 10px;
+    line-height: 1.4;
 }
 
 .colorShade {
     display: block;
     font-size: 12px;
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.4;
+    margin-top: 4px;
 }
 </style>
 
 <script setup>
 
+const copyColorCode = async (e, code) => {
+    const alertEl = document.createElement('span');
+    alertEl.style.position = "absolute";
+    alertEl.style.display = "block";
+    alertEl.style.left = "50%";
+    alertEl.style.transform = "translate(-50%,-100%)";
+    alertEl.style.backgroundColor = "#6366F1";
+    alertEl.style.color = "white";
+    alertEl.style.fontSize = "11px";
+    alertEl.style.padding = "4px 8px";
+    alertEl.style.borderRadius = "4px";
+    alertEl.style.lineHeight = 1.3;
+    alertEl.innerText = "Copied!";
+    e.target.append(alertEl);
+    await navigator.clipboard.writeText(code);
+
+    setTimeout(function () {
+        alertEl.remove();
+    }, 3000);
+
+}
+
 const colors = [
+    {
+        name: "Slate",
+        colors: {
+            "DEFAULT": "#64748b",
+            "50": "#f8fafc",
+            "100": "#f1f5f9",
+            "200": "#e2e8f0",
+            "300": "#cbd5e1",
+            "400": "#94a3b8",
+            "500": "#64748b",
+            "600": "#475569",
+            "700": "#334155",
+            "800": "#1e293b",
+            "900": "#0f172a",
+        }
+    },
     {
         name: "Gray",
         colors: {
-            "DEFAULT": "#71717A",
-            "50": "#FAFAFA",
-            "100": "#F4F4F5",
-            "200": "#E4E4E7",
-            "300": "#D4D4D8",
-            "400": "#A1A1AA",
-            "500": "#71717A",
-            "600": "#52525B",
-            "700": "#3F3F46",
-            "800": "#27272A",
-            "900": "#18181B"
-        }
-    },
-    {
-        name: "Blue Gray",
-        colors: {
-            "DEFAULT": "#64748B",
-            "50": "#F8FAFC",
-            "100": "#F1F5F9",
-            "200": "#E2E8F0",
-            "300": "#CBD5E1",
-            "400": "#94A3B8",
-            "500": "#64748B",
-            "600": "#475569",
-            "700": "#334155",
-            "800": "#1E293B",
-            "900": "#0F172A",
-        }
-    },
-    {
-        name: "Cool Gray",
-        colors: {
-            "DEFAULT": "#4B5563",
-            "50": "#F9FAFB",
-            "100": "#F3F4F6",
-            "200": "#E5E7EB",
-            "300": "#D1D5DB",
-            "400": "#9CA3AF",
-            "500": "#6B7280",
-            "600": "#4B5563",
-            "700": "#4B5563",
-            "800": "#1F2937",
+            "DEFAULT": "#6b7280",
+            "50": "#f9fafb",
+            "100": "#f3f4f6",
+            "200": "#e5e7eb",
+            "300": "#d1d5db",
+            "400": "#9ca3af",
+            "500": "#6b7280",
+            "600": "#4b5563",
+            "700": "#374151",
+            "800": "#1f2937",
             "900": "#111827",
         }
     },
     {
-        name: "True Gray",
+        name: "Zinc",
+        colors: {
+            "DEFAULT": "#71717a",
+            "50": "#fafafa",
+            "100": "#f4f4f5",
+            "200": "#e4e4e7",
+            "300": "#d4d4d8",
+            "400": "#a1a1aa",
+            "500": "#71717a",
+            "600": "#52525b",
+            "700": "#3f3f46",
+            "800": "#27272a",
+            "900": "#18181b",
+        }
+    },
+    {
+        name: "Neutral",
         colors: {
             "DEFAULT": "#737373",
-            "50": "#FAFAFA",
-            "100": "#F5F5F5",
-            "200": "#E5E5E5",
-            "300": "#D4D4D4",
-            "400": "#A3A3A3",
+            "50": "#fafafa",
+            "100": "#f5f5f5",
+            "200": "#e5e5e5",
+            "300": "#d4d4d4",
+            "400": "#a3a3a3",
             "500": "#737373",
             "600": "#525252",
             "700": "#404040",
@@ -137,19 +155,19 @@ const colors = [
         }
     },
     {
-        name: "Warm Gray",
+        name: "Stone",
         colors: {
-            "DEFAULT": "#78716C",
-            "50": "#FAFAF9",
-            "100": "#F5F5F4",
-            "200": "#E7E5E4",
-            "300": "#D6D3D1",
-            "400": "#A8A29E",
-            "500": "#78716C",
-            "600": "#57534E",
-            "700": "#44403C",
+            "DEFAULT": "#78716c",
+            "50": "#fafaf9",
+            "100": "#f5f5f4",
+            "200": "#e7e5e4",
+            "300": "#d6d3d1",
+            "400": "#a8a29e",
+            "500": "#78716c",
+            "600": "#57534e",
+            "700": "#44403c",
             "800": "#292524",
-            "900": "#1C1917",
+            "900": "#1c1917",
         }
     },
     {
@@ -297,10 +315,10 @@ const colors = [
         }
     },
     {
-        name: "Light Blue",
+        name: "Sky",
         colors: {
             "DEFAULT": "#0EA5E9",
-            "50": "#F0F9FF",
+            "50": "#f0f9ff",
             "100": "#E0F2FE",
             "200": "#BAE6FD",
             "300": "#7DD3FC",

@@ -7,13 +7,17 @@ Installation and setup of this the package is as easy as you setup other package
 ```shell
 flutter pub add -d tailwind_cli
 ```
+OR
+```shell
+dart pub add  -d tailwind_cli
+```
 
 Or mannually
 
 ```yaml
 dev_dependencies:
   #...
-  tailwind_cli: ^0.7.0 // [!code ++]
+  tailwind_cli: ^0.7.1 // [!code ++]
 ```
 
 And then install the libraries with

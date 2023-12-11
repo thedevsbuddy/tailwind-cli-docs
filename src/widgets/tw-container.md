@@ -1,5 +1,5 @@
 ---
-title: TwContainer - The saviour
+title: TwContainer
 ---
 
 # TwContainer
@@ -46,9 +46,9 @@ No matter what you use for creating Container you will get the flutter's `Contai
 
 ```dart
 Widget build(BuildContext contexr){
-    return TwContainer(
-        child: TwText("I am a TwContainer").render(),
-    ).backgroundColor(context).center.render();
+    return TwContainer( // [!code ++]
+        child: TwText("I am a TwContainer").render(), // [!code ++]
+    ).backgroundColor(context).center.render(); // [!code ++]
 }
 ```
 > Provided code will give you a Container with `backgroundColor` from the theme and it will be aligned center.
@@ -59,7 +59,7 @@ Widget build(BuildContext contexr){
 Widget build(BuildContext contexr){
     return TwText("I am a TwContainer").render()
     .isContainer // [!code ++]
-    .backgroundColor(context).center.render();
+    .backgroundColor(context).center.render(); // [!code ++]
 }
 ```
 > Provided code will give you a Container with `backgroundColor` from the theme and it will be aligned center.
