@@ -1,104 +1,98 @@
 ---
-title: TwRow - Now create and manage Row widget with ease
+title: TwRow
 ---
 
 # TwRow
 
-TwRow provides you a really usefull wrapper around the `Row` Widget to create Row for your app's UI and manage it with ease by using easy to use methods provided by the `TwRow` Widget.
+`TwRow` provides you a really useful wrapper around the `Row` Widget to create Row for your app's UI and manage it with ease by using easy to use methods provided by the `TwRow` Widget.
 
-## How it is useful?
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| TwRow         | Row                |
 
-As we all know that to use and configure each Widgets in flutter we need to apply a lot of code to achieve our desired look. But not to worry now `TailwindCLI` provides you same widgets with a tweek to it that lets you build UI with less key strokes.
+:::tip
+You have 2 options to create a `Row` Widget in your app while using `TailwindCLI` for UI design.
 
-### Traditional Row
-
-`Row` Widget with some properties utilized.
-
-:::code-group
-
-```dart [Alignment Start]
-Row(
-    mainAxisAlignment: MainAxisAlignment.start,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-        /// Childrens here
-    ],
-)
-```
-
-```dart [Alignment End]
-Row(
-    mainAxisAlignment: MainAxisAlignment.end,
-    crossAxisAlignment: CrossAxisAlignment.end,
-    children: [
-        /// Childrens here
-    ],
-)
-```
-
+1. `TwRow` Widget
+   * You can directly use this Widget to get a `Row` and start styling it by built in methods & extensions for all posible styles. 
+2. `.isRow` extension method
+   * Or you can use this extension method on `Row` Widget that will convert it to `TwRow` and provides you the extensions for all posible styling and return Native `Row` widget at the end.
 :::
 
-### Using TwRow
+No matter what you use for creating Row you will get the flutter's `Row` Widget at the end.
 
-`TwRow` Widget some properties utilized.
 
-:::code-group
+## Usage
 
-```dart [Alignment Start]
-TwRow(
-    children: [
-        /// Childrens here
-    ],
-)
-.justifyStart
-.alignStart
-.render()
+* `TwRow`: Widget
+* `.isRow`: Extension 
+
+`TwRow` and `.isRow` are just wrappers around the Row Widget itself to help you style it with ease using extension methods.
+
+`TwRow` is a wrapper widget around the Row widget which allows you to create Row widget with ease.
+
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| TwRow()       | Row                |
+
+
+`.isRow` is a helpful extension which creates a Row widget.
+
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| .isRow        | Row                |
+
+
+### TwRow widget
+
+```dart
+Widget build(BuildContext contexr){
+    return TwRow(<Widget>[ // [!code ++]
+        TwText("Left Text").render(), // [!code ++]
+        TwText("Right Text").render(), // [!code ++]
+    ]).justifyBetween.render(); // [!code ++]
+}
+```
+>  Provided code will give you a Row with `mainAxisAlignment` as `MainAxisAlignment.spaceBetween`.
+
+### .isRow extension
+
+```dart
+Widget build(BuildContext contexr){
+    return Row(
+          children: [
+            TwText("Left Text").render(),
+            TwText("Right Text").render(),
+          ],
+        ).isRow // It's Magic: By using this  // [!code focus]
+        .justifyBetween.render(); // You will be able to do this  // [!code focus]
+}
+```
+> Provided code will give you a Row with `mainAxisAlignment` as `MainAxisAlignment.spaceBetween`.
+
+
+## TwRow Constructor
+```dart
+TwRow(List<Widget> _children)
 ```
 
-```dart [Alignment End]
-TwRow(
-    children: [
-        /// Childrens here
-    ],
-)
-.justifyEnd
-.alignEnd
-.render()
-```
+## TwRow properties
 
-:::
-
-`Row` Widget some properties utilized.
-
-:::code-group
-
-```dart [Convert Row Widget to TwRow]
-Row(
-    children: [
-        /// Childrens here
-    ],
-)
-.isRow
-.justifyStart
-.alignStart
-.render()
-```
-
-:::
+* `List<Widget>` [**__children_**](#twrow-widget): Children to be rendered inside this Row Widget.
 
 ## Api References
 
 `TwRow` centralized all the properties of Row widget into easy to use methods.
 
 ### mainAxisAlignment (Aligns horizontally)
-| Method/Extension | Replaces           | Applies                         |
-| ---------------- | ------------------ | ------------------------------- |
-| .justifyCenter   | mainAxisAlignment  | MainAxisAlignment.center        |
-| .justifyStart    | mainAxisAlignment  | MainAxisAlignment.start         |
-| .justifyEnd      | mainAxisAlignment  | MainAxisAlignment.end           |
-| .justifyBetween  | mainAxisAlignment  | MainAxisAlignment.spaceBetween  |
-| .justifyAround   | mainAxisAlignment  | MainAxisAlignment.spaceAround   |
-| .justifyEvenly   | mainAxisAlignment  | MainAxisAlignment.spaceEvenly   |
+| Method/Extension | Replaces          | Applies                        |
+| ---------------- | ----------------- | ------------------------------ |
+| .justifyCenter   | mainAxisAlignment | MainAxisAlignment.center       |
+| .justifyStart    | mainAxisAlignment | MainAxisAlignment.start        |
+| .justifyEnd      | mainAxisAlignment | MainAxisAlignment.end          |
+| .justifyBetween  | mainAxisAlignment | MainAxisAlignment.spaceBetween |
+| .justifyAround   | mainAxisAlignment | MainAxisAlignment.spaceAround  |
+| .justifyEvenly   | mainAxisAlignment | MainAxisAlignment.spaceEvenly  |
 
 ### crossAxisAlignment (Aligns vertically)
 | Method/Extension | Replaces           | Applies                         |
@@ -112,7 +106,7 @@ Row(
 
 
 ### mainAxisSize
-| Method/Extension | Replaces           | Applies                         |
-| ---------------- | ------------------ | ------------------------------- |
-| .max             | mainAxisSize       | MainAxisSize.max                |
-| .min             | mainAxisSize       | MainAxisSize.min                |
+| Method/Extension | Replaces     | Applies          |
+| ---------------- | ------------ | ---------------- |
+| .max             | mainAxisSize | MainAxisSize.max |
+| .min             | mainAxisSize | MainAxisSize.min |

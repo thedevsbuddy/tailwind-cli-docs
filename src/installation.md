@@ -9,7 +9,7 @@ flutter pub add -d tailwind_cli
 ```
 OR
 ```shell
-dart pub add  -d tailwind_cli
+dart pub add -d tailwind_cli
 ```
 
 Or mannually

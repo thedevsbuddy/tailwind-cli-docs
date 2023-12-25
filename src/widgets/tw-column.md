@@ -1,104 +1,99 @@
 ---
-title: TwColumn - Now create and manage Column widget with ease
+title: TwColumn
 ---
 
 # TwColumn
 
-TwColumn provides you a really usefull wrapper around the `Column` Widget to create Column for your app's UI and manage it with ease by using easy to use methods provided by the `TwColumn` Widget.
+TwColumn provides you a really useful wrapper around the `Column` Widget to create Column for your app's UI and manage it with ease by using easy to use methods & extensions provided by the `TwColumn` Widget.
 
-## How it is useful?
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| TwColumn      | Column             |
 
-As we all know that to use and configure each Widgets in flutter we need to apply a lot of code to achieve our desired look. But not to worry now `TailwindCLI` provides you same widgets with a tweek to it that lets you build UI with less key strokes.
+:::tip
+You have 2 options to create a `Column` Widget in your app while using `TailwindCLI` for UI design.
 
-### Traditional Column
-
-`Column` Widget with some properties utilized.
-
-:::code-group
-
-```dart [Alignment Start]
-Column(
-    mainAxisAlignment: MainAxisAlignment.start,
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-        /// Childrens here
-    ],
-)
-```
-
-```dart [Alignment End]
-Column(
-    mainAxisAlignment: MainAxisAlignment.end,
-    crossAxisAlignment: CrossAxisAlignment.end,
-    children: [
-        /// Childrens here
-    ],
-)
-```
-
+1. `TwColumn` Widget
+   * You can directly use this Widget to get a `Column` and start styling it by built in methods & extensions for all posible styles. 
+2. `.isColumn` extension method
+   * Or you can use this extension method on `Column` Widget that will convert it to `TwColumn` and provides you the extensions for all posible styling and return Native `Column` widget at the end.
 :::
 
-### Using TwColumn
+No matter what you use for creating Column you will get the flutter's `Column` Widget at the end.
 
-`TwColumn` Widget some properties utilized.
 
-:::code-group
+## Usage
 
-```dart [Alignment Start]
-TwColumn(
-    children: [
-        /// Childrens here
-    ],
-)
-.justifyStart
-.alignStart
-.render()
+* `TwColumn`: Widget
+* `.isColumn`: Extension 
+
+`TwColumn` and `.isColumn` are just wrappers around the Column Widget itself to help you style it with ease using extension methods.
+
+`TwColumn` is a wrapper widget around the Column widget which allows you to create Column widget with ease.
+
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| TwColumn()    | Column             |
+
+
+`.isColumn` is a helpful extension which creates a Column widget.
+
+| **Tw Widget** | **Flutter Widget** |
+| ------------- | ------------------ |
+| .isColumn     | Column             |
+
+
+### TwColumn widget
+
+```dart
+Widget build(BuildContext contexr){
+    return TwColumn(<Widget>[ // [!code ++]
+        TwText("Text Item 1").render(), // [!code ++]
+        TwText("Text Item 2").render(), // [!code ++]
+    ]).alignCenter.render(); // [!code ++]
+}
+```
+>  Provided code will give you a Row with `crossAxisAlignment` as `CrossAxisAlignment.center`.
+
+### .isColumn extension
+
+```dart
+Widget build(BuildContext contexr){
+    return Column(
+          children: [
+            TwText("Text Item 1").render(),
+            TwText("Text Item 2").render(),
+          ],
+        ).isColumn // It's Magic: By using this  // [!code focus]
+        .alignCenter.render(); // You will be able to do this  // [!code focus]
+}
+```
+> Provided code will give you a Row with `crossAxisAlignment` as `CrossAxisAlignment.center`.
+
+
+## TwColumn Constructor
+```dart
+TwColumn(List<Widget> _children)
 ```
 
-```dart [Alignment End]
-TwColumn(
-    children: [
-        /// Childrens here
-    ],
-)
-.justifyEnd
-.alignEnd
-.render()
-```
+## TwColumn properties
 
-:::
+* `List<Widget>` [**__children_**](#twcolumn-widget): Children to be rendered inside this Column Widget.
 
-`Column` Widget some properties utilized.
-
-:::code-group
-
-```dart [Convert Column Widget to TwColumn]
-Column(
-    children: [
-        /// Childrens here
-    ],
-)
-.isColumn
-.justifyStart
-.alignStart
-.render()
-```
-
-:::
 
 ## Api References
 
 `TwColumn` centralized all the properties of Column widget into easy to use methods.
 
 ### mainAxisAlignment (Aligns vertically)
-| Method/Extension | Replaces           | Applies                         |
-| ---------------- | ------------------ | ------------------------------- |
-| .justifyCenter   | mainAxisAlignment  | MainAxisAlignment.center        |
-| .justifyStart    | mainAxisAlignment  | MainAxisAlignment.start         |
-| .justifyEnd      | mainAxisAlignment  | MainAxisAlignment.end           |
-| .justifyBetween  | mainAxisAlignment  | MainAxisAlignment.spaceBetween  |
-| .justifyAround   | mainAxisAlignment  | MainAxisAlignment.spaceAround   |
-| .justifyEvenly   | mainAxisAlignment  | MainAxisAlignment.spaceEvenly   |
+| Method/Extension | Replaces          | Applies                        |
+| ---------------- | ----------------- | ------------------------------ |
+| .justifyCenter   | mainAxisAlignment | MainAxisAlignment.center       |
+| .justifyStart    | mainAxisAlignment | MainAxisAlignment.start        |
+| .justifyEnd      | mainAxisAlignment | MainAxisAlignment.end          |
+| .justifyBetween  | mainAxisAlignment | MainAxisAlignment.spaceBetween |
+| .justifyAround   | mainAxisAlignment | MainAxisAlignment.spaceAround  |
+| .justifyEvenly   | mainAxisAlignment | MainAxisAlignment.spaceEvenly  |
 
 ### crossAxisAlignment (Aligns horizontally)
 | Method/Extension | Replaces           | Applies                         |
@@ -112,7 +107,7 @@ Column(
 
 
 ### mainAxisSize
-| Method/Extension | Replaces           | Applies                         |
-| ---------------- | ------------------ | ------------------------------- |
-| .max             | mainAxisSize       | MainAxisSize.max                |
-| .min             | mainAxisSize       | MainAxisSize.min                |
+| Method/Extension | Replaces     | Applies          |
+| ---------------- | ------------ | ---------------- |
+| .max             | mainAxisSize | MainAxisSize.max |
+| .min             | mainAxisSize | MainAxisSize.min |
