@@ -17,7 +17,7 @@ Or mannually
 ```yaml
 dev_dependencies:
   #...
-  tailwind_cli: ^0.7.1 // [!code ++]
+  tailwind_cli: ^0.7.2 // [!code ++]
 ```
 
 And then install the libraries with
