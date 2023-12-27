@@ -87,67 +87,19 @@ TwButton({required this.child})
 ### Internal Methods
 TwButton has some built in methods to provide styles to the Button UI. These methods are specifically defined for the Button UI.
 
-#### .withConstraints(BoxConstraints constraints)
-`.withConstraints` method allows you to provide constraints to the Button UI so you can provide constraints to the Button.
+| Method                                         | What it does                                        |
+| ---------------------------------------------- | --------------------------------------------------- |
+| .withConstraints(BoxConstraints constraints)   | Adds BoxContraints to the Button UI                 |
+| .color(Color color)                            | Provides Color to Button UI                         |
+| .transform(Matrix4 val)                        | Adds transformation                                 |
+| .clip(Clip clip)                               | Clip the Button UI                                  |
+| .setBusy(bool isBusy)                          | Sets Button State to Busy (Shows loading indicator) |
+| .setBusyWidget(Widget? busyWidget)             | Adds custom loading indicator                       |
+| .withBorder(Border border)                     | Adds custom border                                  |
+| .linearGradient(LinearGradient linearGradient) | Adds Linear Gradient                                |
+| .radialGradient(RadialGradient radialGradient) | Adds Radial Gradient                                |
+| .sweepGradient(SweepGradient sweepGradient)    | Adds Sweep Gradient                                 |
 
-##### Example:
-```dart
-TwButton(child: "I am a Button".isText.render())
-    .withConstraints(BoxConstraints(maxWidth: 120)) // It will be only 120 unit wide max. //[!code focus] 
-    .primaryColor(context).onTap(() => print("Button Clicked.")).render(),
-```
-
-#### .color(Color color)
-`.color` method allows you to provide custom color to the Button UI.
-
-##### Example:
-```dart
-TwButton(child: "I am a Button".isText.render())
-    .color(Colors.white) // It will be white colored button. //[!code focus] 
-    .primaryColor(context).onTap(() => print("Button Clicked.")).render(),
-```
-
-<!--/// Sets the transform property to the animated box.
-TwButton transform(Matrix4 val) => this.._transform = val;
-
-/// Sets the clip behavior of the box.
-TwButton clip(Clip clip) => this.._clip = clip;
-
-/// To make it busy.
-TwButton setBusy(bool isBusy) {
-_isBusy = isBusy;
-return this;
-}
-
-/// To show on busy state.
-@Deprecated('Please use [setBusyWidget] instead.')
-TwButton addBusyWidget(Widget? busyWidget) {
-_loadingWidget = busyWidget;
-return this;
-}
-
-TwButton setBusyWidget(Widget? busyWidget) {
-_loadingWidget = busyWidget;
-return this;
-}
-
-/// Sets the border of the Box.
-TwButton withBorder(Border border) {
-_border = border;
-return this;
-}
-
-/// Sets the linear gradient to the decorated box.
-TwButton linearGradient(LinearGradient linearGradient) => this.._gradient = linearGradient;
-
-/// Sets the radial gradient to the decorated box.
-TwButton radialGradient(RadialGradient radialGradient) => this.._gradient = radialGradient;
-
-/// Sets the sweep gradient to the decorated box.
-TwButton sweepGradient(SweepGradient sweepGradient) => this.._gradient = sweepGradient; -->
-
-
-### Internal Extensions
 
 ### Methods & Extensions from Mixins
 
@@ -162,3 +114,4 @@ TwButton sweepGradient(SweepGradient sweepGradient) => this.._gradient = sweepGr
 | [Paddings](/mixins/paddings)   | [Paddings](/methods/paddings)   |
 | [Roundness](/mixins/roundness) | [Roundness](/methods/roundness) |
 | [Shadows](/mixins/shadow)      | [Shadows](/methods/shadow)      |
+| [Size](/mixins/size)           | N/A                             |

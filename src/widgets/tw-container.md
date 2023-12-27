@@ -78,8 +78,48 @@ TwContainer({this.child})
 
 `TwContainer` provides you helpful extensions and methods to style your widget with ease.
 
-### Extensions
-`.clipAntialias`: Sets Container's Clip property to `Clip.antiAlias` value.
+
+### Internal Methods
+TwContainer has some built in & useful methods that can be used to change and style Container Look and Feel.
+
+| Method                                         | What it does                                        |
+| ---------------------------------------------- | --------------------------------------------------- |
+| .withConstraints(BoxConstraints constraints)   | Adds BoxContraints to the Button UI                 |
+| .color(Color color)                            | Provides Color to Button UI                         |
+| .transform(Matrix4 val)                        | Adds transformation                                 |
+| .clip(Clip clip)                               | Clip the Button UI                                  |
+| .setBusy(bool isBusy)                          | Sets Button State to Busy (Shows loading indicator) |
+| .setBusyWidget(Widget? busyWidget)             | Adds custom loading indicator                       |
+| .withBorder(Border border)                     | Adds custom border                                  |
+| .linearGradient(LinearGradient linearGradient) | Adds Linear Gradient                                |
+| .radialGradient(RadialGradient radialGradient) | Adds Radial Gradient                                |
+| .sweepGradient(SweepGradient sweepGradient)    | Adds Sweep Gradient                                 |
+| .withShadow(List<BoxShadow\> shadows)          | Adds custom box shadow                              |
+| .shadowOutline({Color? outlineColor})          | Adds custom color as box shadow                     |
+| .bgImage(DecorationImage image)                | Adds Background image to Container                  |
+
+### Internal Extensions
+TwContainer has some built in & useful extensions that can be used to change and style Container Look and Feel.
+
+| Extension               | What it does                                       |
+| ----------------------- | -------------------------------------------------- |
+| .clipAntialias          | Sets `clipBehavior` to Clip.antialias              |
+| .clipAliasWithSaveLayer | Sets `clipBehavior` to Clip.antiAliasWithSaveLayer |
+| .clipHardEdge           | Sets `clipBehavior` to Clip.hardEdge               |
+| .roundedFull            | Make it circle shape                               |
 
 
+### Methods & Extensions from Mixins
 
+| Mixins Extensions              | Mixins Methods                  |
+| ------------------------------ | ------------------------------- |
+| [Alignment](/mixins/alignment) | [Alignment](/methods/alignment) |
+| [Borders](/mixins/border)      | N/A                             |
+| [Colors](/mixins/colors)       | [Colors](/methods/colors)       |
+| [Gestures](/mixins/gestures)   | [Gestures](/methods/gestures)   |
+| [Gradients](/mixins/gradients) | [Gradients](/methods/gradients) |
+| [Margins](/mixins/margins)     | [Margins](/methods/margins)     |
+| [Paddings](/mixins/paddings)   | [Paddings](/methods/paddings)   |
+| [Roundness](/mixins/roundness) | [Roundness](/methods/roundness) |
+| [Shadows](/mixins/shadow)      | [Shadows](/methods/shadow)      |
+| [Size](/mixins/size)           | N/A                             |

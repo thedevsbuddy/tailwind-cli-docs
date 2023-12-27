@@ -178,15 +178,6 @@ export default {
           { text: "Opacity", link: "/effects/opacity" },
         ],
       },
-      // {
-      //   text: "Examples",
-      //   collapsible: true,
-      //   collapsed: true,
-      //   items: [
-      //     { text: "eVault - Budget Tracking App", link: "#" },
-      //     { text: "Example App", link: "#" },
-      //   ],
-      // },
     ],
   },
 };
