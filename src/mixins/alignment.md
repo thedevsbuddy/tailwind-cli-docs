@@ -6,6 +6,8 @@ title: Alignment Mixin - Mixins
 
 Only a handful of extensions are offered for the Alignment Mixin, and these cover all the requirements for any widget. As a result, there is no need for any configuration option in the `tailwind.config.json` file.
 
+## Extensions
+
 | Extension     | Description                    |
 | ------------- | ------------------------------ |
 | .topCenter    | Align widget to `topCenter`    |
@@ -17,3 +19,6 @@ Only a handful of extensions are offered for the Alignment Mixin, and these cove
 | .bottomCenter | Align widget to `bottomCenter` |
 | .bottomLeft   | Align widget to `bottomLeft`   |
 | .bottomRight  | Align widget to `bottomRight`  |
+
+
+## Methods

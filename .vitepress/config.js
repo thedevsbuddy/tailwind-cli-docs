@@ -154,30 +154,30 @@ export default {
           { text: "Size", link: "/mixins/size" },
         ]
       },
-      {
-        text: "Methods",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          { text: "Alignment", link: "/methods/alignment" },
-          { text: "Colors", link: "/methods/colors" },
-          { text: "Gestures", link: "/methods/gestures" },
-          { text: "Gradients", link: "/methods/gradients" },
-          { text: "Margins", link: "/methods/margins" },
-          { text: "Paddings", link: "/methods/paddings" },
-          { text: "Roundness", link: "/methods/roundness" },
-          { text: "Shadow", link: "/methods/shadow" },
-        ]
-      },
-      {
-        text: "Effects",
-        collapsible: true,
-        collapsed: true,
-        items: [
-          { text: "Box Shadow", link: "/effects/box-shadow" },
-          { text: "Opacity", link: "/effects/opacity" },
-        ],
-      },
+      // {
+      //   text: "Methods",
+      //   collapsible: true,
+      //   collapsed: true,
+      //   items: [
+      //     { text: "Alignment", link: "/methods/alignment" },
+      //     { text: "Colors", link: "/methods/colors" },
+      //     { text: "Gestures", link: "/methods/gestures" },
+      //     { text: "Gradients", link: "/methods/gradients" },
+      //     { text: "Margins", link: "/methods/margins" },
+      //     { text: "Paddings", link: "/methods/paddings" },
+      //     { text: "Roundness", link: "/methods/roundness" },
+      //     { text: "Shadow", link: "/methods/shadow" },
+      //   ]
+      // },
+      // {
+      //   text: "Effects",
+      //   collapsible: true,
+      //   collapsed: true,
+      //   items: [
+      //     { text: "Box Shadow", link: "/effects/box-shadow" },
+      //     { text: "Opacity", link: "/effects/opacity" },
+      //   ],
+      // },
     ],
   },
 };

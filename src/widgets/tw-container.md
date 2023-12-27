@@ -111,15 +111,15 @@ TwContainer has some built in & useful extensions that can be used to change and
 
 ### Methods & Extensions from Mixins
 
-| Mixins Extensions              | Mixins Methods                  |
-| ------------------------------ | ------------------------------- |
-| [Alignment](/mixins/alignment) | [Alignment](/methods/alignment) |
-| [Borders](/mixins/border)      | N/A                             |
-| [Colors](/mixins/colors)       | [Colors](/methods/colors)       |
-| [Gestures](/mixins/gestures)   | [Gestures](/methods/gestures)   |
-| [Gradients](/mixins/gradients) | [Gradients](/methods/gradients) |
-| [Margins](/mixins/margins)     | [Margins](/methods/margins)     |
-| [Paddings](/mixins/paddings)   | [Paddings](/methods/paddings)   |
-| [Roundness](/mixins/roundness) | [Roundness](/methods/roundness) |
-| [Shadows](/mixins/shadow)      | [Shadows](/methods/shadow)      |
-| [Size](/mixins/size)           | N/A                             |
+| Mixins Extensions                         | Mixins Methods                         |
+| ----------------------------------------- | -------------------------------------- |
+| [Alignment](/mixins/alignment#extensions) | [Alignment](/mixins/alignment#methods) |
+| [Borders](/mixins/border#extensions)      | N/A                                    |
+| [Colors](/mixins/colors#extensions)       | [Colors](/mixins/colors#methods)       |
+| [Gestures](/mixins/gestures#extensions)   | [Gestures](/mixins/gestures#methods)   |
+| [Gradients](/mixins/gradients#extensions) | [Gradients](/mixins/gradients#methods) |
+| [Margins](/mixins/margins#extensions)     | [Margins](/mixins/margins#methods)     |
+| [Paddings](/mixins/paddings#extensions)   | [Paddings](/mixins/paddings#methods)   |
+| [Roundness](/mixins/roundness#extensions) | [Roundness](/mixins/roundness#methods) |
+| [Shadows](/mixins/shadow#extensions)      | [Shadows](/mixins/shadow#methods)      |
+| [Size](/mixins/size#extensions)           | N/A                                    |
