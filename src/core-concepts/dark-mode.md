@@ -92,14 +92,14 @@ Container(
 
 ## Toggling dark mode
 
-By default the dark variant for colors is disabled, If you want to use dark variant then you should enable it in the `tailwind.config.json` file.
+By default the dark variant for colors is enabled, If you want you can disable it from `tailwind.config.json` file.
 
 ::: warning
-If you already used dark mode in your app and then changing this value to `false` and re-building tailwind styles will break your app as all the dark mode code will be removed but it is used in the app so it will make your app to crash.
+If you already used dark mode in your app and then changing this value to `false` and re-building tailwind styles will break your app as all the dark mode code will be removed but it is used in the app so it will crash your app.
 :::
 
 ```json
 {
-  "darkMode": true // Default: false // [!code ++]
+  "darkMode": false // Default: true // [!code ++]
 }
 ```
