@@ -99,10 +99,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TwAppBuilder( // [!code focus]
-      builder: (BuildContext context) { // [!code focus]
+      builder: (BuildContext context, ThemeMode themeMode) { // [!code focus]
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
+          key: TwService.appKey,
+          themeMode: themeMode,
           theme: ThemeData(
             primaryColor: TwColors.gray,
             appBarTheme: AppBarTheme(

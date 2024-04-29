@@ -22,7 +22,7 @@ This is a Wrapper widget for the Image widget provided by the flutter and it pro
 | --------------------------------------- | --------------------------------------------- |
 | TwImage('images/logo.png')              | Image.asset('images/logo.png')                |
 | TwImage('https://example.com/logo.png') | Image.network('https://example.com/logo.png') |
-| TwImage('file://')                      | Image.network('https://example.com/logo.png') |
+| TwImage('file://')                      | Image.file('file://image/path/logo.png') |
 
 ### TwImage Widget
 

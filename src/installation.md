@@ -17,7 +17,7 @@ Or mannually
 ```yaml
 dev_dependencies:
   #...
-  tailwind_cli: ^0.7.2 // [!code ++]
+  tailwind_cli: ^0.7.5 // [!code ++]
 ```
 
 And then install the libraries with
@@ -45,6 +45,7 @@ Publishing the `tailwind.config.json` file will create a config file for Tailwin
 
 ```json [tailwind.config.json]
 {
+  "darkMode": true,
   "colors": {},
   "spacers": {},
   "fontSizes": {},

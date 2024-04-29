@@ -16,12 +16,12 @@ If you opt to use `TwAppBuilder` it provides you a variable with `ThemeMode`. Yo
 
 :::code-group
 
-```dart[main.dart]
+```dart [main.dart]
 TwAppBuilder(
   builder: (BuildContext context, ThemeMode themeMode) {
     return MaterialApp(
-    key: TwService.appKey,
-    themeMode: themeMode, // [!code ++] // This will apply theme in your app
+      key: TwService.appKey,
+      themeMode: themeMode, // [!code ++] // This will apply theme in your app
     );
   }
 );

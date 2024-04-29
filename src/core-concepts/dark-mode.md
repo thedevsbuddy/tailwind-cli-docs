@@ -9,7 +9,7 @@ To make this as easy as possible, Tailwind includes a `onDark` variant that lets
 ::: tip
 You may be having issues while using `onDark<Color>` method and extensions for color. It won't update when you change the theme of the device or app you will need to add `TwAppBuilder` in order to refresh the UI when theme changes.
 
-[Learn More About "**_TwAppBuilder_**"](../colors/dark-theme#tw-app-builder)
+[Learn More About "**_TwAppBuilder_**"](../colors/dark-theme#using-twappbuilder)
 :::
 
 ### For backgrounds
