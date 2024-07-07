@@ -2,31 +2,31 @@ export default {
   title: "TailwindCLI",
   description: "Just playing around.",
   base: "/tailwind-cli/",
-  cleanUrls: false,
-  srcDir: './src',
-  outDir: './.vitepress/tailwind-cli',
+  cleanUrls: true,
+  srcDir: "./src",
+  outDir: "./.vitepress/tailwind-cli",
   markdown: {
     lineNumbers: true,
     defaultHighlightLang: "dart",
   },
   head: [
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
+        rel: "icon",
         type: "image/x-icon",
-        href: '/tailwind-cli/images/favicon.png'
+        href: "/tailwind-cli/images/favicon.png",
       },
     ],
     [
-      'script',
+      "script",
       {
         async: true,
-        src: 'https://www.googletagmanager.com/gtag/js?id=G-GKNMVN5QK0',
+        src: "https://www.googletagmanager.com/gtag/js?id=G-GKNMVN5QK0",
       },
     ],
     [
-      'script',
+      "script",
       {},
       "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-GKNMVN5QK0');",
     ],
@@ -34,7 +34,7 @@ export default {
   themeConfig: {
     logo: "/images/logo.png",
     search: {
-      provider: 'local'
+      provider: "local",
     },
     outline: [2, 4],
     socialLinks: [
@@ -152,7 +152,7 @@ export default {
           { text: "Roundness", link: "/mixins/roundness" },
           { text: "Shadow", link: "/mixins/shadow" },
           { text: "Size", link: "/mixins/size" },
-        ]
+        ],
       },
       // {
       //   text: "Methods",
