@@ -25,3 +25,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: /
           local-dir: ./.vitepress/tailwind-cli/
+          dangerous-clean-slate: true
