@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home4/webdecod/docs.devsbuddy.com/
-    - rm -rf $DEPLOYPATH/tailwind-cli/
-    - /bin/cp -R .vitepress/tailwind-cli $DEPLOYPATH
