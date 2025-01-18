@@ -5,7 +5,7 @@ title: The ultimate solution to build flutter apps with tailwind styles
 # Introduction
 
 <!-- <figure><img src=".gitbook/assets/TailwindCLI-Banner.svg" alt=""><figcaption></figcaption></figure> -->
-<figure><img class="banner" src="/assets/Tailwind-banner.svg" alt="Tailwind CLI"><figcaption></figcaption></figure>
+<figure><img class="banner" src="/assets/tailwind-cli-banner.png" alt="Tailwind CLI"><figcaption></figcaption></figure>
 
 A simple yet awesome flutter package to generate and use TailwindCSS-like styling in your flutter projects.
 
