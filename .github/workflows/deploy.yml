@@ -8,7 +8,7 @@ jobs:
     name: Deploy Tailwind CLI Docs
     runs-on: ubuntu-latest
     steps:
-      - Echo ${{ secrets.FTP_SERVER }}
+      - name: Echo ${{ secrets.FTP_SERVER }}
       - name: 👨‍💻 Get the latest code
         uses: actions/checkout@v4
       - uses: actions/setup-node@v4
