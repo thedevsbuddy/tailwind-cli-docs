@@ -95,7 +95,7 @@ Container(
 By default the dark variant for colors is enabled, If you want you can disable it from `tailwind.config.json` file.
 
 ::: warning
-If you already used dark mode in your app and then changing this value to `false` and re-building tailwind styles will break your app as all the dark mode code will be removed but it is used in the app so it will crash your app.
+If you already built Tailwind Styles with dark mode enabled and used these dark styeles in your app and now you disabled the darkMode and re-built the Tailwind Styles will lead your app to crash as if you build Tailwind Styles after disabling the darkMode it will not generate code related to darkMode.
 :::
 
 ```json

@@ -9,16 +9,18 @@ I know, One of the best things about `TailwindCSS` is that it has great support 
 
 ### Enable Dark Theme
 
-The dark theme is disabled by default and you should enable it if you want to use it.
+The dark theme is enabled by default and you should disabled it if you want.
 
-#### Go to your tailwind.config.json file
+:::code-group
 
-```json
+```json[tailwind.config.json]
 {
-  "darkMode": true // [!code ++]
-  //....
+  "darkMode": true // [!code --]
+  "darkMode": false // [!code ++]
 }
 ```
+
+:::
 
 Add the above line or update its value to `true` which enables the `Dark Theme` inside the tailwind project.
 
