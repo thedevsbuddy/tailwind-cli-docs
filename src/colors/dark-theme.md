@@ -93,20 +93,20 @@ You may have an issue in which your `dark` mode color not applying when changing
 In your `main.dart` where you initialised the `MaterialApp` you must add this.
 
 ```dart
-import "package:tailwind/tailwind.dart"; // [!code focus]
+import "package:tailwind/tailwind.dart"; // [!code ++]
 
 //... Other stuffs
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return TwAppBuilder( // [!code focus]
-      builder: (BuildContext context, ThemeMode themeMode) { // [!code focus]
+    return TwAppBuilder( // [!code ++]
+      builder: (BuildContext context, ThemeMode themeMode) { // [!code ++]
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           key: TwService.appKey,
-          themeMode: themeMode,
+          themeMode: themeMode, // [!code ++]
           theme: ThemeData(
             primaryColor: TwColors.gray,
             appBarTheme: AppBarTheme(
@@ -117,8 +117,8 @@ class MyApp extends StatelessWidget {
           ),
           home: ExamplePage(),
         );
-      }, // [!code focus]
-    ); // [!code focus]
+      }, // [!code ++]
+    ); // [!code ++]
   }
 }
 ```
